@@ -235,7 +235,7 @@ function App() {
         <section id="reviews" className="section reviews">
           <div className="section-header">
             <span className="eyebrow">Rishikimet</span>
-            <h2>Çfarë thonë pacientët tanë</h2>
+            <h2>Përshtypjet e pacientëve tanë</h2>
             <p>Lexoni përvojat e pacientëve nga Mitrovica që vijnë tek ne për një buzëqeshje më të shëndetshme.</p>
           </div>
           <div className="reviews-grid">
@@ -260,7 +260,7 @@ function App() {
         <section id="contact" className="section contact">
           <div className="section-header">
             <span className="eyebrow">Kontakt</span>
-            <h2>Merrni një lidhje me ekipin tonë.
+            <h2><KONTAKTI></KONTAKTI>
 </h2>
           </div>
           <div className="contact-panel">
