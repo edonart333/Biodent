@@ -27,7 +27,7 @@ body { background: var(--bg); color: var(--text); margin: 0; font-family: Inter,
   gap: 48px;
 }
 
-.topbar { background: transparent; padding: 18px 0; position: absolute; top: 0; left: 0; right: 0; z-index: 50; }
+.topbar { background: rgba(255,255,255,0.88); padding: 18px 0; position: sticky; top: 0; left: 0; right: 0; z-index: 60; backdrop-filter: blur(16px); border-bottom: 1px solid rgba(11,107,58,0.08); }
 .topbar-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
 .logo { display:flex; align-items:center; gap:10px; font-weight:800; color:var(--sage-600); font-size:1.2rem; }
 .logo-icon { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:12px; background: rgba(11,107,58,0.12); color: var(--sage-600); font-size:1rem; }
@@ -44,7 +44,7 @@ body { background: var(--bg); color: var(--text); margin: 0; font-family: Inter,
   align-items: center;
   gap: 32px;
   min-height: 100vh;
-  padding: 160px 0 32px;
+  padding: 196px 0 32px;
   background: linear-gradient(180deg, rgba(213,240,215,1) 0%, rgba(255,255,255,0.92) 58%);
   overflow: hidden;
   position: relative;
@@ -204,10 +204,10 @@ body { background: var(--bg); color: var(--text); margin: 0; font-family: Inter,
 @media (max-width:760px){
   .container { padding: 0 16px; }
   .topbar-inner { flex-wrap:wrap; justify-content:space-between; gap:12px; }
+  .hero-section { padding: 120px 0 18px; }
   .topnav { width:100%; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-top:12px; }
   .topnav a { font-size:0.92rem; min-width: 0; }
   .nav-right { width:100%; display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; }
-  .hero-section { padding:90px 0 18px; }
   .hero-section::after { width:220px; height:220px; top: 4%; right: 6%; }
   .slide-overlay { padding:18px; max-width:100%; width:100%; left:0; right:0; }
   .slide-overlay h1 { font-size:clamp(1.75rem, 7vw, 2.6rem); line-height:1.1; }
