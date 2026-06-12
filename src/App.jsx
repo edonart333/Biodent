@@ -149,7 +149,7 @@ function App() {
       </div>
       <header className="hero-section">
         <div className="hero-slider slide-in">
-          <div key={slideIndex} className="slide-overlay slide-in fade-up">
+          <div className="slide-overlay">
             <div className="hero-topline">Biodent</div>
             <h1>{currentSlide.title}</h1>
             <p>{currentSlide.description}</p>
@@ -163,7 +163,7 @@ function App() {
               <span>💚 Trajtim i butë</span>
             </div>
           </div>
-          <img key={slideIndex} src={currentSlide.src} alt={currentSlide.alt} className="hero-image" />
+          <img src={currentSlide.src} alt={currentSlide.alt} className="hero-image" />
           <div className="slide-caption">{currentSlide.alt}</div>
           <div className="slide-dots">
             {slides.map((_, index) => (
