@@ -260,7 +260,7 @@ function App() {
         <section id="contact" className="section contact">
           <div className="section-header">
             <span className="eyebrow">Kontakt</span>
-            <h2><KONTAKTI></KONTAKTI>
+            <h2>Kontakti
 </h2>
           </div>
           <div className="contact-panel">
