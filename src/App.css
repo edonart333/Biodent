@@ -209,7 +209,7 @@ body { background: var(--bg); color: var(--text); margin: 0; font-family: Inter,
   .topnav a { font-size:0.92rem; min-width: 0; }
   .nav-right { width:100%; display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; }
   .hero-section::after { width:220px; height:220px; top: 4%; right: 6%; }
-  .slide-overlay { padding:18px; max-width:100%; width:100%; left:0; right:0; }
+  .slide-overlay { position:absolute; top: 14px; left: 14px; right: 14px; width: auto; max-width: calc(100% - 28px); padding:18px; margin:0 auto; }
   .slide-overlay h1 { font-size:clamp(1.75rem, 7vw, 2.6rem); line-height:1.1; }
   .slide-overlay p { font-size:0.98rem; max-width:100%; }
   .slide-overlay, .slide-overlay h1, .slide-overlay p, .hero-highlights span, .section-header, .card { overflow-wrap:anywhere; word-break:break-word; }
