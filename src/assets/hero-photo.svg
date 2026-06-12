@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" fill="none">
+  <rect width="800" height="520" rx="24" fill="#EAF4FF"/>
+  <g transform="translate(80,60)">
+    <circle cx="120" cy="120" r="100" fill="#CEF0FF" />
+    <rect x="260" y="30" width="320" height="360" rx="20" fill="#DFF6EB" />
+    <text x="30" y="420" fill="#0D3C68" font-size="26" font-family="sans-serif">Hero photo placeholder</text>
+  </g>
+</svg>

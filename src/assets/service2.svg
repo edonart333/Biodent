@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360" fill="none">
+  <rect width="600" height="360" rx="20" fill="#FFF9F6"/>
+  <circle cx="480" cy="120" r="80" fill="#FFE9D6"/>
+  <rect x="40" y="60" width="300" height="220" rx="14" fill="#F0F8FF"/>
+  <text x="28" y="320" fill="#3C2A18" font-size="18" font-family="sans-serif">Service photo 2</text>
+</svg>
