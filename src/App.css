@@ -92,8 +92,6 @@ body { background: var(--bg); color: var(--text); margin: 0; font-family: Inter,
 .btn.small { padding:8px 14px }
 .btn:hover { transform: translateY(-3px) }
 
-.show-more-mobile { display: none; margin-top: 20px; }
-.show-more-mobile .btn { width: auto; }
 
 .primary { background: linear-gradient(90deg,var(--sage-600),var(--sage-400)); color:#fff; box-shadow: 0 14px 40px rgba(11,107,58,0.12) }
 .secondary { border:1px solid rgba(13,60,104,0.08); color:var(--text-h); background: #fff }
@@ -203,7 +201,6 @@ body { background: var(--bg); color: var(--text); margin: 0; font-family: Inter,
   .slide-dots { position: static; justify-content:center; margin-top:16px; right:auto; left:auto; }
   .hero-highlights { justify-content:center; }
   .hero-highlights span { width: 100%; }
-  .show-more-mobile { display: flex; justify-content: center; }
 }
 @media (max-width:760px){
   .container { padding: 0 16px; }
