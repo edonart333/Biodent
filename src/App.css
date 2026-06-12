@@ -92,6 +92,9 @@ body { background: var(--bg); color: var(--text); margin: 0; font-family: Inter,
 .btn.small { padding:8px 14px }
 .btn:hover { transform: translateY(-3px) }
 
+.show-more-mobile { display: none; margin-top: 20px; }
+.show-more-mobile .btn { width: auto; }
+
 .primary { background: linear-gradient(90deg,var(--sage-600),var(--sage-400)); color:#fff; box-shadow: 0 14px 40px rgba(11,107,58,0.12) }
 .secondary { border:1px solid rgba(13,60,104,0.08); color:var(--text-h); background: #fff }
 
@@ -200,6 +203,7 @@ body { background: var(--bg); color: var(--text); margin: 0; font-family: Inter,
   .slide-dots { position: static; justify-content:center; margin-top:16px; right:auto; left:auto; }
   .hero-highlights { justify-content:center; }
   .hero-highlights span { width: 100%; }
+  .show-more-mobile { display: flex; justify-content: center; }
 }
 @media (max-width:760px){
   .container { padding: 0 16px; }
@@ -209,7 +213,7 @@ body { background: var(--bg); color: var(--text); margin: 0; font-family: Inter,
   .topnav a { font-size:0.92rem; min-width: 0; }
   .nav-right { width:100%; display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; }
   .hero-section::after { width:220px; height:220px; top: 4%; right: 6%; }
-  .slide-overlay { position:absolute; top: 14px; left: 14px; right: 14px; width: auto; max-width: calc(100% - 28px); padding:18px; margin:0 auto; }
+  .slide-overlay { position: relative; width: 100%; max-width: 760px; margin: 0 auto 18px; padding:18px; }
   .slide-overlay h1 { font-size:clamp(1.75rem, 7vw, 2.6rem); line-height:1.1; }
   .slide-overlay p { font-size:0.98rem; max-width:100%; }
   .slide-overlay, .slide-overlay h1, .slide-overlay p, .hero-highlights span, .section-header, .card { overflow-wrap:anywhere; word-break:break-word; }

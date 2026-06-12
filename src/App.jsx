@@ -7,35 +7,37 @@ function App() {
       src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1400&q=80',
       title: 'Buzëqeshje të reja me shërbim të butë',
       description: 'Një buzëqeshje e hapur dhe e ndritshme që tregon sfondin tonë të kujdesit të avancuar.',
-      alt: 'Grua që qesh me dhëmbë të dukshëm dhe vetëbesim',
+      alt: '',
     },
     {
       src: 'https://tse2.mm.bing.net/th/id/OIP.m4eCtlBWcmJWENi8eMYjdwHaEP?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3',
       title: 'Rezultate të dukshme dhe dhëmbë të shëndetshëm',
       description: 'Rezultate vizualisht të dukshme dhe dhëmbë të shëndetshëm pas trajtimeve tona.',
-      alt: 'Burrë që qesh hapur me dhëmbë të dukshëm',
+      alt: '',
     },
     {
       src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1400&q=80',
       title: 'Buzëqeshjet që rrisin besimin',
       description: 'Qershia mbi tortë? Dhëmbë të shëndetshëm që shfaqen në një buzëqeshje të plotë.',
-      alt: 'Grua që qesh me dhëmbë të dukshëm dhe energji të ngrohtë',
+      alt: '',
     },
     {
       src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1400&q=80',
       title: 'Elegancë dentare për çdo buzëqeshje',
       description: 'Buzëqeshjet e pacientëve tanë pas traumave të dhëmbëve rritin besimin dhe komoditetin.',
-      alt: 'Burrë që qesh hapur dhe tregon dhëmbët',
+      alt: '',
     },
     {
       src: 'https://static.vecteezy.com/system/resources/previews/057/087/596/large_2x/a-handsome-man-with-a-genuine-smile-and-perfect-teeth-poses-against-a-neutral-background-conveying-joy-and-a-sense-of-well-being-free-photo.jpg',
       title: 'Dhëmbë të bardhë që bëjnë ndryshimin',
       description: 'Trajtimet tona estetike mbi dhëmbë të dukshëm sjellin rezultate të qarta.',
-      alt: 'Grup me buzëqeshje të hapura dhe dhëmbë të dukshëm',
+      alt: '',
     },
   ]
 
   const [slideIndex, setSlideIndex] = useState(0)
+  const [showAllServices, setShowAllServices] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -43,6 +45,14 @@ function App() {
     }, 7000)
     return () => clearInterval(timer)
   }, [slides.length])
+
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 900px)')
+    const update = () => setIsMobile(query.matches)
+    update()
+    query.addEventListener('change', update)
+    return () => query.removeEventListener('change', update)
+  }, [])
 
   useEffect(() => {
     const elements = document.querySelectorAll('.fade-up')
@@ -112,6 +122,8 @@ function App() {
       details: 'Ofrojmë opsione pagesash, paketim të trajtimeve dhe këshilla të qarta për të reduktuar surprizat në faturë.',
     },
   ]
+
+  const visibleServices = isMobile && !showAllServices ? services.slice(0, 4) : services
 
   const affordability = [
     {
@@ -186,13 +198,20 @@ function App() {
             <p>Nga diagnostikimi i saktë dhe higjiena e përditshme, te trajtimet estetike, implantet dhe urgjencat, ne ofrojmë shërbime gjithëpërfshirëse për të ruajtur dhe përmirësuar shëndetin tuaj oral.</p>
           </div>
           <div className="cards-grid services-grid">
-            {services.map((service, index) => (
+            {visibleServices.map((service, index) => (
               <article key={index} className="card fade-up">
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
               </article>
             ))}
           </div>
+          {isMobile && services.length > 4 && (
+            <div className="show-more-mobile">
+              <button className="btn secondary small" onClick={() => setShowAllServices((value) => !value)}>
+                {showAllServices ? 'Trego më pak' : 'Shfaq më shumë'}
+              </button>
+            </div>
+          )}
         </section>
 
         <section id="affordability" className="section affordability">
