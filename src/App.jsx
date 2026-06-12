@@ -5,25 +5,25 @@ function App() {
   const slides = [
     {
       src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1400&q=80',
-      title: 'Buzëqeshje të shndritshme me dhëmbë të dukshëm',
+      title: 'Buzëqeshje të reja me shërbim të butë',
       description: 'Një buzëqeshje e hapur dhe e ndritshme që tregon sfondin tonë të kujdesit të avancuar.',
       alt: 'Grua që qesh me dhëmbë të dukshëm dhe vetëbesim',
     },
     {
       src: 'https://tse2.mm.bing.net/th/id/OIP.m4eCtlBWcmJWENi8eMYjdwHaEP?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3',
-      title: 'Qeshje natyrale me dhëmbë të bardhë',
+      title: 'Rezultate të dukshme dhe dhëmbë të shëndetshëm',
       description: 'Rezultate vizualisht të dukshme dhe dhëmbë të shëndetshëm pas trajtimeve tona.',
       alt: 'Burrë që qesh hapur me dhëmbë të dukshëm',
     },
     {
       src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1400&q=80',
-      title: 'Paraqitje të pastër dhe të besueshme',
+      title: 'Buzëqeshjet që rrisin besimin',
       description: 'Qershia mbi tortë? Dhëmbë të shëndetshëm që shfaqen në një buzëqeshje të plotë.',
       alt: 'Grua që qesh me dhëmbë të dukshëm dhe energji të ngrohtë',
     },
     {
       src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1400&q=80',
-      title: 'Buzëqeshje të mbushura me energji',
+      title: 'Elegancë dentare për çdo buzëqeshje',
       description: 'Buzëqeshjet e pacientëve tanë pas traumave të dhëmbëve rritin besimin dhe komoditetin.',
       alt: 'Burrë që qesh hapur dhe tregon dhëmbët',
     },
@@ -149,7 +149,7 @@ function App() {
       </div>
       <header className="hero-section">
         <div className="hero-slider slide-in">
-          <div className="slide-overlay fade-up">
+          <div key={slideIndex} className="slide-overlay slide-in fade-up">
             <div className="hero-topline">Biodent</div>
             <h1>{currentSlide.title}</h1>
             <p>{currentSlide.description}</p>
