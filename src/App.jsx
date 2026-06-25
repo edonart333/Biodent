@@ -21,18 +21,6 @@ function App() {
       description: 'Stafi ynë ofron trajtim të qetë dhe të saktë për çdo pacient dhe moshë.',
       alt: 'Mjek dentar duke punuar me pacientin',
     },
-    {
-      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1400&q=80',
-      title: 'Rezultate që duket e natyrshme',
-      description: 'Ne kujdesemi që çdo ndryshim të jetë i qetë, i rehatshëm dhe i përshtatshëm për ju.',
-      alt: 'Buzëqeshje natyrale pas trajtimit',
-    },
-    {
-      src: 'https://static.vecteezy.com/system/resources/previews/057/087/596/large_2x/a-handsome-man-with-a-genuine-smile-and-perfect-teeth-poses-against-a-neutral-background-conveying-joy-and-a-sense-of-well-being-free-photo.jpg',
-      title: 'Trajtim që ju bën të ndiheni mirë',
-      description: 'Përqendrohemi te rehati dhe fuqia e buzëqeshjes suaj në çdo vizitë.',
-      alt: 'Persona i lumtur me buzëqeshje të re',
-    },
   ]
 
   const [slideIndex, setSlideIndex] = useState(0)
@@ -49,11 +37,8 @@ function App() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
-          } else {
-            entry.target.classList.remove('is-visible')
-          }
+          if (entry.isIntersecting) entry.target.classList.add('is-visible')
+          else entry.target.classList.remove('is-visible')
         })
       },
       { threshold: 0.1 }
@@ -66,60 +51,23 @@ function App() {
   const currentSlide = slides[slideIndex]
 
   const services = [
-    {
-      title: 'Kontrolle të plota dhe diagnostikim',
-      description: 'Ne shohim me kujdes çdo pjesë të gojës suaj dhe planifikojmë trajtimin që ju nevojitet.',
-    },
-    {
-      title: 'Pastrim profesional',
-      description: 'Pastrimi i dhëmbëve dhe mjekrës krijon kushtet më të mira për një shëndet të mirë oral.',
-    },
-    {
-      title: 'Kujdes kozmetik',
-      description: 'Zbardhja ose veshjet e vogla mund t’i japin dhëmbëve një pamje më të pastër dhe të freskët.',
-    },
-    {
-      title: 'Riparime dhe kurora',
-      description: 'Kurora, ngulime dhe mbushje riparojnë dhëmbët e dëmtuar dhe rikthejnë funksionin.',
-    },
-    {
-      title: 'Aparate dhe korrigjime',
-      description: 'Ofrojmë zgjidhje për dhëmbët e zëna dhe për rregullimin e qafës së gojës.',
-    },
-    {
-      title: 'Implante dhe zëvendësime',
-      description: 'Zëvendësojmë dhëmbët e humbur me implante të qëndrueshme dhe të bukura.',
-    },
-    {
-      title: 'Ndihmë për urgjenca',
-      description: 'Trajtime të shpejta për dhimbje dhëmbësh dhe probleme të papritura.',
-    },
-    {
-      title: 'Udhëzime për kujdesin e përditshëm',
-      description: 'Faleminderit se kjo është një pjesë e rëndësishme e shëndetit oral tuaj.',
-    },
-    {
-      title: 'Planifikim pagesash',
-      description: 'Diskutojmë mënyra të thjeshta pagese për të bërë trajtimin të lehtë për ju.',
-    },
+    { title: 'Kontrolle të plota dhe diagnostikim', description: 'Ne shohim me kujdes çdo pjesë të gojës suaj dhe planifikojmë trajtimin që ju nevojitet.' },
+    { title: 'Pastrim profesional', description: 'Pastrimi i dhëmbëve dhe mjekrës krijon kushtet më të mira për një shëndet të mirë oral.' },
+    { title: 'Kujdes kozmetik', description: 'Zbardhja ose veshjet e vogla mund t’i japin dhëmbëve një pamje më të pastër dhe të freskët.' },
+    { title: 'Riparime dhe kurora', description: 'Kurora, ngulime dhe mbushje riparojnë dhëmbët e dëmtuar dhe rikthejnë funksionin.' },
+    { title: 'Aparate dhe korrigjime', description: 'Ofrojmë zgjidhje për dhëmbët e zëna dhe për rregullimin e qafës së gojës.' },
+    { title: 'Implante dhe zëvendësime', description: 'Zëvendësojmë dhëmbët e humbur me implante të qëndrueshme dhe të bukura.' },
+    { title: 'Ndihmë për urgjenca', description: 'Trajtime të shpejta për dhimbje dhëmbësh dhe probleme të papritura.' },
+    { title: 'Udhëzime për kujdesin e përditshëm', description: 'Udhëzime të qarta për rutinën tuaj të përditshme të kujdesit oral.' },
+    { title: 'Planifikim pagesash', description: 'Diskutojmë mënyra të thjeshta pagese për të bërë trajtimin të lehtë për ju.' },
   ]
 
+  const [showMoreServices, setShowMoreServices] = useState(false)
+
   const affordability = [
-    {
-      title: 'Kontrolle të qarta',
-      subtitle: 'Transparencë të plotë',
-      description: 'Çmime të thjeshta për kontrollin dhe pastrimin e parë.',
-    },
-    {
-      title: 'Paketa familjare',
-      subtitle: 'Zbritje për familjen',
-      description: 'Oferta për prindër dhe fëmijë me tarifa të përballueshme.',
-    },
-    {
-      title: 'Pagesa të ndara',
-      subtitle: 'Fleksibilitet',
-      description: 'Opsione financiare për trajtime më të mëdha.',
-    },
+    { title: 'Kontrolle të qarta', subtitle: 'Transparencë të plotë', description: 'Çmime të thjeshta për kontrollin dhe pastrimin e parë.' },
+    { title: 'Paketa familjare', subtitle: 'Zbritje për familjen', description: 'Oferta për prindër dhe fëmijë me tarifa të përballueshme.' },
+    { title: 'Pagesa të ndara', subtitle: 'Fleksibilitet', description: 'Opsione financiare për trajtime më të mëdha.' },
   ]
 
   return (
@@ -134,7 +82,7 @@ function App() {
             <a href="#contact">Kontakt</a>
           </nav>
           <div className="nav-right">
-            <a className="phone" href="tel:+15551234567">(+383) 49-176-542</a>
+            <a className="phone" href="tel:+38349176542">(+383) 49-176-542</a>
             <a className="btn primary small" href="#contact">Rezervo Vizitë</a>
           </div>
         </div>
@@ -178,7 +126,7 @@ function App() {
             <h2>Trajtime të thjeshta dhe të qarta për shëndetin e gojës.</h2>
             <p>Ofrojmë kontroll, pastrim, riparime dhe zgjidhje të tjera me një qasje të thjeshtë dhe të përshtatshme për ju.</p>
           </div>
-          <div className="cards-grid">
+          <div className={`cards-grid ${showMoreServices ? 'expanded' : 'collapsed'}`}>
             {services.map((service, index) => (
               <article key={index} className="card fade-up">
                 <h3>{service.title}</h3>
@@ -186,6 +134,14 @@ function App() {
               </article>
             ))}
           </div>
+          <button
+            type="button"
+            className="btn secondary show-more-btn"
+            onClick={() => setShowMoreServices((prev) => !prev)}
+            aria-expanded={showMoreServices}
+          >
+            {showMoreServices ? 'Shfaq më pak' : 'Shfaq më shumë'}
+          </button>
         </section>
 
         <section id="affordability" className="section">
@@ -256,9 +212,7 @@ function App() {
               <h2 style={{ margin: '0 0 0.75rem 0', color: 'var(--text-h)' }}>Gati për të filluar?</h2>
               <p>Na telefononi në <strong>(+383) 49-176-542</strong> ose na dërgoni një email për të caktuar terminin tuaj.</p>
             </div>
-            <a className="btn primary" href="mailto:hello@biodent.com">
-              hello@biodent.com
-            </a>
+            <a className="btn primary" href="mailto:hello@biodent.com">hello@biodent.com</a>
           </div>
         </section>
       </main>
