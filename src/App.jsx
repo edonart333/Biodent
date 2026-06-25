@@ -21,7 +21,20 @@ function App() {
       description: 'Stafi ynë ofron trajtim të qetë dhe të saktë për çdo pacient dhe moshë.',
       alt: 'Mjek dentar duke punuar me pacientin',
     },
+       {
+      src: 'https://th.bing.com/th/id/OIP.eaFggNiO_36rxR2ztOq-OwHaEJ?w=311&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
+      title: 'Shërbim miqësor dhe profesional',
+      description: 'Stafi ynë ofron trajtim të qetë dhe të saktë për çdo pacient dhe moshë.',
+      alt: 'Mjek dentar duke punuar me pacientin',
+    },
+       {
+      src: 'https://th.bing.com/th/id/OIP.oW77fqehIATnDfI-qy3L-QHaEp?w=273&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
+      title: 'Shërbim miqësor dhe profesional',
+      description: 'Stafi ynë ofron trajtim të qetë dhe të saktë për çdo pacient dhe moshë.',
+      alt: 'Mjek dentar duke punuar me pacientin',
+    }
   ]
+  
 
   const [slideIndex, setSlideIndex] = useState(0)
 
