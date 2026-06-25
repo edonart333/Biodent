@@ -134,7 +134,7 @@ function App() {
             <a href="#contact">Kontakt</a>
           </nav>
           <div className="nav-right">
-            <a className="phone" href="tel:+15551234567">(555) 123-4567</a>
+            <a className="phone" href="tel:+15551234567">(+383) 49-176-542</a>
             <a className="btn primary small" href="#contact">Rezervo Vizitë</a>
           </div>
         </div>
@@ -254,7 +254,7 @@ function App() {
           <div className="contact-panel">
             <div>
               <h2 style={{ margin: '0 0 0.75rem 0', color: 'var(--text-h)' }}>Gati për të filluar?</h2>
-              <p>Na telefononi në <strong>(555) 123-4567</strong> ose na dërgoni një email për të caktuar terminin tuaj.</p>
+              <p>Na telefononi në <strong>(+383) 49-176-542</strong> ose na dërgoni një email për të caktuar terminin tuaj.</p>
             </div>
             <a className="btn primary" href="mailto:hello@biodent.com">
               hello@biodent.com
